@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="coderoasters">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Code Roasters a company of software development">
+    <meta name="author" content="">
+    <meta property="og:image" content="http://coderoasters.com/img/coder.png" />
+
+    <title>Code Roasters - Software Development</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css" rel="stylesheet" type='text/css'>
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet" type='text/css'>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="MainCtrl" id="page-top" class="index">
+    <div id="loading-div">
+
+        <div class="sk-cube-grid">
+            <img class="img-responsive" src="img/coderN.png" />
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img class="img-responsive logo-nav" src="img/coderB.png" alt="">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#page-top">{{'HOME'|translate}}</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#about">{{'ABOUT'|translate}}</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">{{'TEAM'|translate}}</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">{{'SERVICES'|translate}}</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#clients">{{'Clients'|translate}}</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">{{'CONTACT'|translate}}</a>
+                    </li>
+                    <!--<li>
+                        <a class="page-scroll" href="#portfolio">{{'PORTFOLIO'|translate}}</a>
+                    </li>-->
+                    <!--
+                    <li>
+                        <a class="page-scroll" href="#team">{{'TEAM'|translate}}</a>
+                    </li>-->
+                    <li title="{{'CHANGELANG'|translate}}">
+                        <a class="bg-light-gray" style="cursor: pointer" data-ng-click="changeLanguage(language=='en'? 'es':'en')">{{'BUTTON_LANG_EN'|translate}}</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">{{'GREETINGS'|translate}}</div>
+                <div class="intro-heading">{{'WELCOME2'|translate}}</div>
+                <a href="#about" class="page-scroll btn btn-xl">{{'TELLMEMORE'|translate}}</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{'ABOUT2'|translate}}</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="img/about/hondurasflat.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{'ABOUT3'|translate}}</h4>
+                                <h4 class="subheading">{{'ABOUT4'|translate}}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">{{'ABOUT5'|translate}}</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="img/about/2.png" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{'ABOUT6'|translate}}</h4>
+                                <h4 class="subheading">{{'ABOUT7'|translate}}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">{{'ABOUT8'|translate}}</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="img/about/3.png" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{'ABOUT9'|translate}}</h4>
+                                <h4 class="subheading">{{'ABOUT10'|translate}}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">{{'ABOUT11'|translate}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="bg-darkest-gray">
+        <div class="container content">
+            <div class="heading">
+                <h2><strong>{{ 'OURTEAM' | translate }}</strong></h2>
+                <p>{{ 'OURTEAMSUB' | translate }}</p>
+            </div>
+            <!-- //end heading -->
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="team-members">
+                        <div class="team-avatar">
+                            <img class="img-responsive" src="img/team/2.jpg" alt="">
+                        </div>
+                        <div class="team-desc">
+                            <h4>Edax Uclés</h4>
+                            <span>Full-Stack Roaster</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-members">
+                        <div class="team-avatar">
+                            <img class="img-responsive" src="img/team/3.jpg" alt="">
+                        </div>
+                        <div class="team-desc">
+                            <h4>Oscar Presidente</h4>
+                            <span>Mobile & Gaming Roaster</span>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- //end row -->
+        </div>
+        <!--<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">
+                        
+                    </h3>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle img-profile" alt="">
+                        <h4>Daniel Leitón</h4>
+                        <p class="text-muted">Full Stack Web Roaster</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/DannyLeiton" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            </li>
+                            <li><a href="https://cr.linkedin.com/in/daniel-leitón-49025543" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle img-profile" alt="">
+                        <h4>Edax Uclés</h4>
+                        <p class="text-muted">Full Stack Web Roaster</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/f1lander" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/edax-ucles-aa597657" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle img-profile" alt="">
+                        <h4>Oscar Presidente</h4>
+                        <p class="text-muted">Mobile & Game Roaster</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/Struka9/" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                             <li><a href="https://cr.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle img-profile" alt="">
+                        <h4>Robert Mudget</h4>
+                        <p class="text-muted">Growth Hacking Roaster</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/DannyLeiton" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            </li>
+                            <li><a href="https://cr.linkedin.com/in/daniel-leitón-49025543" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">
+
+                    </p>
+                </div>
+            </div>
+        </div>-->
+    </section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{'SERVICES2'|translate}}</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">{{'WEBDEV'|translate}}</h4>
+                    <p class="text-muted">{{'WEBDEVDESC'|translate}}</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">{{'MOBILEDEV'|translate}}</h4>
+                    <p class="text-muted">{{'MOBILEDEVDESC'|translate}}</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">{{'GAMESDEV'|translate}}</h4>
+                    <p class="text-muted">{{'GAMESDEVDESC'|translate}}</p>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-heading">{{'WEUSE'|translate}}</h3>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="row text-center">
+                <div class="col-md-2 col-sm-1 col-xs-1">
+
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="MongoDB" src="img/logos/mongodb.png" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="ExpressJs" src="img/logos/express.png" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="AngularJs" src="img/logos/angular.png" />
+                    <!--<i class="icon-javascript-alt" style="font-size:4em" title="JavaScript"></i>-->
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-2">
+                    <img class="img-responsive" title="NodeJs" src="img/logos/node.png" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+
+                <div class="col-md-2 col-sm-1 col-xs-1">
+
+                </div>
+
+            </div>
+            <br/>
+            <br/>
+            <div class="row text-center">
+                <div class="col-md-2 col-sm-3 col-xs-3">
+
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-2">
+                    <img class="img-responsive" title="Gulp" src="img/logos/gulp.png" />
+                    <!--<i class="icon-javascript-alt" style="font-size:4em" title="JavaScript"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="Less" src="img/logos/less.png" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="Node Package Manager" src="img/logos/npm.gif" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="Android Development" src="img/logos/android.jpg" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-2">
+                    <img class="img-responsive" title="Swift" src="img/logos/swift.gif" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                </div>
+
+            </div>
+            <div class="row text-center">
+                <div class="col-md-2 col-sm-2 col-xs-1">
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="Ionic Framework" src="img/logos/ionic.png" />
+                    <!--<i class="icon-javascript-alt" style="font-size:4em" title="JavaScript"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="Unity 3d" src="img/logos/unity.gif" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <img class="img-responsive" title="ReactiveJs" src="img/logos/rx.png" />
+                    <!--<i class="icon-html" style="font-size:4em" title="HTML5"></i>-->
+                </div>
+
+                <div class="col-md-2 col-sm-1 col-xs-1">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="bg-darkest-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{'PROJECTS'|translate}}</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <aside class="clients">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                          
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <a target="_blank" href="http://xcoobee.com">
+                                <img src="img/xcoobee.png" class="img-responsive" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                          
+                        </div>
+                       
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{'CONTACT2'|translate}}</h2>
+                    <h3 class="section-subheading text-muted">{{'CONTACT3'|translate}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="{{'CONTACT4'|translate}}" id="name" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="{{'CONTACT6'|translate}}" id="email" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="{{'CONTACT8'|translate}}" id="phone" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="{{'CONTACT10'|translate}}" id="message" required data-validation-required-message="{{'CONTACT11'|translate}}"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">{{'CONTACT12'|translate}}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright"><img class="img-responsive logo-bottom" src="img/coder.png" alt=""> <!-- Copyright &copy; 2016 --> </span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <!--<li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>-->
+                        <li><a href="tel:+506-851-938-67" title="(+506)85193867"><i class="fa fa-phone"></i></a>
+                        </li>
+                        <li><a href="#contact" title="info@coderoasters.com"><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.google.es/maps/place/9%C2%B057'17.1%22N+84%C2%B013'47.3%22W/@9.9547498,-84.2319887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d9.9547498!4d-84.2298"
+                                title="San José, Costa Rica"><i class="fa fa-map-marker"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Grid Section
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{'PORTFOLIO'|translate}}</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Startup Framework</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Treehouse</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Golden</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Escape</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Dreams</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section-->
+
+
+
+
+    <!-- Clients Aside 
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>-->
+
+    <!-- Portfolio Modals
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here 
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p>
+                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                            <ul class="list-inline">
+                                <li>Date: July 2014</li>
+                                <li>Client: Round Icons</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Heading</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 --
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here --
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 --
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here --
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
+                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 --
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here --
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
+                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 --
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here --
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- jQuery -->
+    <script src="//load.sumome.com/" data-sumo-site-id="77d72c9492dc3509bc0569d6ccefd2ffc3611a65325fb65987f7e964f30904fb" async="async"></script>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+    <!-- AngularJS -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+
+</body>
+
+</html>
